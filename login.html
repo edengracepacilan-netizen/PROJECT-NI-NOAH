@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Salamence Tracker</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <main class="login-container">
+
+        <section class="welcome-section">
+            <p class="eyebrow">LOGISTICS & SUPPLY CHAIN</p>
+
+            <h1>
+                Welcome to<br>
+                <span>Salamence Tracker</span>
+            </h1>
+
+            <p class="welcome-text">
+                Manage your inventory, monitor fleet operations,
+                organize warehouse activities, and track supplier orders
+                in one convenient platform.
+            </p>
+
+            <div class="feature-list">
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    Inventory Management
+                </div>
+
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    Fleet Tracking
+                </div>
+
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    Warehouse Monitoring
+                </div>
+            </div>
+        </section>
+
+        <section class="login-card">
+
+            <div class="login-heading">
+                <div class="login-icon">🔐</div>
+                <h2>Sign In</h2>
+                <p>Enter your account details to continue.</p>
+            </div>
+
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Enter your username"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        required
+                    >
+                </div>
+
+                <div class="form-options">
+                    <label class="remember">
+                        <input type="checkbox" id="remember">
+                        Remember me
+                    </label>
+                </div>
+
+                <button type="submit" class="login-button">
+                    Log In
+                </button>
+
+                <p id="login-message" class="login-message"></p>
+            </form>
+
+            <p class="account-switch">
+                New user?
+                <a href="register.html">Create Account</a>
+            </p>
+
+            <div class="login-footer">
+                <p>Authorized users only.</p>
+                <p>© 2026 Salamence Tracker</p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        Salamence Tracker | Logistics & Supply Chain System
+    </footer>
+
+    <script src="login.js"></script>
+
+</body>
+</html>

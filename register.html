@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | Salamence Tracker</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+    <main class="login-container">
+
+        <section class="welcome-section">
+            <p class="eyebrow">LOGISTICS & SUPPLY CHAIN</p>
+
+            <h1>
+                Join<br>
+                <span>Salamence Tracker</span>
+            </h1>
+
+            <p class="welcome-text">
+                Create your account to manage inventory, monitor fleet
+                operations, organize warehouse activities, and track
+                supplier orders in one convenient platform.
+            </p>
+
+            <div class="feature-list">
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    Inventory Management
+                </div>
+
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    Fleet Tracking
+                </div>
+
+                <div class="feature">
+                    <span class="feature-icon">✓</span>
+                    Warehouse Monitoring
+                </div>
+            </div>
+        </section>
+
+        <section class="login-card">
+
+            <div class="login-heading">
+                <div class="login-icon">👤</div>
+                <h2>Create Account</h2>
+                <p>Register to start using Salamence Tracker.</p>
+            </div>
+
+            <form id="register-form">
+
+                <div class="form-group">
+                    <label for="new-username">Username</label>
+                    <input
+                        type="text"
+                        id="new-username"
+                        name="username"
+                        placeholder="Create a username"
+                        minlength="3"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="new-email">Email</label>
+                    <input
+                        type="email"
+                        id="new-email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="new-password">Password</label>
+                    <input
+                        type="password"
+                        id="new-password"
+                        name="password"
+                        placeholder="Create a password"
+                        minlength="6"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input
+                        type="password"
+                        id="confirm-password"
+                        name="confirm-password"
+                        placeholder="Enter your password again"
+                        minlength="6"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="login-button">
+                    Create Account →
+                </button>
+
+                <p id="register-message" class="login-message"></p>
+
+            </form>
+
+            <p class="account-switch">
+                Already have an account?
+                <a href="login.html">Sign In</a>
+            </p>
+
+            <div class="login-footer">
+                <p>Authorized users only.</p>
+                <p>© 2026 Salamence Tracker</p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        Salamence Tracker | Logistics & Supply Chain System
+    </footer>
+
+    <script src="register.js"></script>
+
+</body>
+</html>

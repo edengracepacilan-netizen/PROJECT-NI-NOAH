@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Salamence Tracker | About</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        if (sessionStorage.getItem("isLoggedIn") !== "true") {
+            window.location.replace("login.html");
+        }
+    </script>
+</head>
+<body>
+
+    <header class="main-navigation">
+        <a href="index.html" class="brand-name">
+            Salamence Tracker
+        </a>
+
+        <nav class="top-nav-links">
+            <a href="about.html" class="top-nav-link">
+                About
+            </a>
+
+            <a href="#" class="top-nav-link" id="logout-button">
+                Logout
+            </a>
+        </nav>
+    </header>
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>Salamence Tracker</h2>
+            <p>Supply Chain System</p>
+        </div>
+
+        <nav>
+            <a href="index.html" class="nav-link">
+                <span class="nav-icon">🏠</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="warehouse.html" class="nav-link">
+                <span class="nav-icon">🏭</span>
+                <span>Warehouse</span>
+            </a>
+
+            <a href="inventory.html" class="nav-link">
+                <span class="nav-icon">📦</span>
+                <span>Inventory Stocks</span>
+            </a>
+
+            <a href="fleet.html" class="nav-link">
+                <span class="nav-icon">🚚</span>
+                <span>Fleet Tracking</span>
+            </a>
+
+            <a href="suppliers.html" class="nav-link">
+                <span class="nav-icon">🛒</span>
+                <span>Supplier Orders</span>
+            </a>
+
+            <a href="ai-assistant.html" class="nav-link">
+                <span class="nav-icon">🤖</span>
+                <span>AI Assistant</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>Salamence Tracker</p>
+            <p>Version 1.0</p>
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>About Salamence Tracker</h1>
+                <p>Logistics and Supply Chain Management System</p>
+            </div>
+
+            <div class="user-info">
+                <span>Administrator</span>
+            </div>
+        </header>
+
+        <section class="content-card">
+            <h2>Who We Are</h2>
+            <p>
+                Salamence Tracker is a logistics and supply chain
+                management system designed to help organize warehouse
+                operations, inventory stocks, vehicle tracking, and
+                supplier orders in one platform.
+            </p>
+        </section>
+
+        <section class="dashboard-cards">
+
+            <article class="stat-card">
+                <div class="stat-icon">🎯</div>
+                <div>
+                    <h2>Our Mission</h2>
+                    <p>
+                        To make logistics operations easier by helping
+                        users manage inventory, monitor deliveries,
+                        and organize supply chain activities efficiently.
+                    </p>
+                </div>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-icon">🔭</div>
+                <div>
+                    <h2>Our Vision</h2>
+                    <p>
+                        To provide an organized and reliable platform
+                        for managing logistics information and supporting
+                        better supply chain decisions.
+                    </p>
+                </div>
+            </article>
+
+        </section>
+
+        <section class="content-card">
+            <h2>Our System Features</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Dashboard</td>
+                            <td>Overview of logistics activities.</td>
+                        </tr>
+                        <tr>
+                            <td>Warehouse</td>
+                            <td>Organization of warehouse information.</td>
+                        </tr>
+                        <tr>
+                            <td>Inventory Stocks</td>
+                            <td>Management of products and stock levels.</td>
+                        </tr>
+                        <tr>
+                            <td>Fleet Tracking</td>
+                            <td>Monitoring of vehicles and deliveries.</td>
+                        </tr>
+                        <tr>
+                            <td>Supplier Orders</td>
+                            <td>Organization of supplier orders.</td>
+                        </tr>
+                        <tr>
+                            <td>AI Assistant</td>
+                            <td>Assistance with supply chain tasks.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="ai-preview">
+            <div>
+                <h2>Our Purpose</h2>
+                <p>
+                    Our goal is to make supply chain information easier
+                    to access, understand, and manage.
+                </p>
+            </div>
+
+            <a href="index.html" class="ai-button">
+                Back to Dashboard
+            </a>
+        </section>
+
+        <footer>
+            <p>
+                &copy; 2026 Salamence Tracker |
+                Logistics & Supply Chain System
+            </p>
+        </footer>
+
+    </main>
+    <script src="script.js"></script>
+
+</body>
+</html>

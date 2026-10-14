@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Salamence Tracker | Supplier Orders</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        if (sessionStorage.getItem("isLoggedIn") !== "true") {
+            window.location.replace("login.html");
+        }
+    </script>
+</head>
+<body>
+    <header class="main-navigation">
+        <a href="index.html" class="brand-name">
+            Salamence Tracker
+        </a>
+
+        <nav class="top-nav-links">
+            <a href="about.html" class="top-nav-link">About</a>
+            <a href="#" class="top-nav-link" id="logout-button">Logout</a>
+        </nav>
+    </header>
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>Salamence Tracker</h2>
+            <p>Supply Chain System</p>
+        </div>
+
+        <nav>
+            <a href="index.html" class="nav-link">
+                <span class="nav-icon">🏠</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="warehouse.html" class="nav-link">
+                <span class="nav-icon">🏭</span>
+                <span>Warehouse</span>
+            </a>
+
+            <a href="inventory.html" class="nav-link">
+                <span class="nav-icon">📦</span>
+                <span>Inventory Stocks</span>
+            </a>
+
+            <a href="fleet.html" class="nav-link">
+                <span class="nav-icon">🚚</span>
+                <span>Fleet Tracking</span>
+            </a>
+
+            <a href="suppliers.html" class="nav-link active">
+                <span class="nav-icon">🛒</span>
+                <span>Supplier Orders</span>
+            </a>
+
+            <a href="ai-assistant.html" class="nav-link">
+                <span class="nav-icon">🤖</span>
+                <span>AI Assistant</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>Salamence Tracker</p>
+            <p>Version 1.0</p>
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>Supplier Orders</h1>
+                <p>Manage suppliers and monitor purchase orders.</p>
+            </div>
+
+            <div class="user-info">
+                <span>Administrator</span>
+            </div>
+        </header>
+
+        <section class="dashboard-cards">
+
+            <article class="stat-card">
+                <div class="stat-icon">🛒</div>
+                <div>
+                    <p>Total Suppliers</p>
+                    <h2 id="total-suppliers">0</h2>
+                    <span>Registered suppliers</span>
+                </div>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-icon">📋</div>
+                <div>
+                    <p>Total Orders</p>
+                    <h2 id="total-orders">0</h2>
+                    <span>Recorded purchase orders</span>
+                </div>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-icon">⏳</div>
+                <div>
+                    <p>Pending Orders</p>
+                    <h2 id="pending-orders">0</h2>
+                    <span>Orders awaiting processing</span>
+                </div>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-icon">✅</div>
+                <div>
+                    <p>Completed Orders</p>
+                    <h2 id="completed-orders">0</h2>
+                    <span>Orders already received</span>
+                </div>
+            </article>
+
+        </section>
+        <section class="content-card">
+
+            <div class="section-header">
+                <div>
+                    <h2>Supplier Records</h2>
+                    <p>List of registered suppliers.</p>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Supplier ID</th>
+                            <th>Supplier Name</th>
+                            <th>Contact Number</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="supplier-table">
+                        <tr>
+                            <td colspan="5">
+                                No supplier records yet.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <section class="content-card">
+
+            <div class="section-header">
+                <div>
+                    <h2>Purchase Orders</h2>
+                    <p>Monitor supplier order status.</p>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Supplier Name</th>
+                            <th>Order Date</th>
+                            <th>Total Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="supplier-orders-table">
+                        <tr>
+                            <td colspan="5">
+                                No purchase orders yet.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+        <footer>
+            <p>
+                &copy; 2026 Salamence Tracker |
+                Logistics & Supply Chain System
+            </p>
+        </footer>
+
+    </main>
+    <script src="script.js"></script>
+    <script src="suppliers.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Salamence Tracker | AI Assistant</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        if (sessionStorage.getItem("isLoggedIn") !== "true") {
+            window.location.replace("login.html");
+        }
+    </script>
+</head>
+<body>
+
+    <header class="main-navigation">
+        <a href="index.html" class="brand-name">
+            Salamence Tracker
+        </a>
+
+        <nav class="top-nav-links">
+            <a href="about.html" class="top-nav-link">About</a>
+            <a href="#" class="top-nav-link" id="logout-button">Logout</a>
+        </nav>
+    </header>
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>Salamence Tracker</h2>
+            <p>Supply Chain System</p>
+        </div>
+
+        <nav>
+            <a href="index.html" class="nav-link">
+                <span class="nav-icon">🏠</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="warehouse.html" class="nav-link">
+                <span class="nav-icon">🏭</span>
+                <span>Warehouse</span>
+            </a>
+
+            <a href="inventory.html" class="nav-link">
+                <span class="nav-icon">📦</span>
+                <span>Inventory Stocks</span>
+            </a>
+
+            <a href="fleet.html" class="nav-link">
+                <span class="nav-icon">🚚</span>
+                <span>Fleet Tracking</span>
+            </a>
+
+            <a href="suppliers.html" class="nav-link">
+                <span class="nav-icon">🛒</span>
+                <span>Supplier Orders</span>
+            </a>
+
+            <a href="ai-assistant.html" class="nav-link active">
+                <span class="nav-icon">🤖</span>
+                <span>AI Assistant</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>Salamence Tracker</p>
+            <p>Version 1.0</p>
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>AI Supply Chain Assistant</h1>
+                <p>Ask questions about logistics and supply chain operations.</p>
+            </div>
+
+            <div class="user-info">
+                <span>Administrator</span>
+            </div>
+        </header>
+
+        <section class="content-card">
+            <div class="stat-icon">🤖</div>
+            <h2>How Can I Help You?</h2>
+            <p>
+                Welcome to the Salamence Tracker AI Assistant.
+                You can ask questions about inventory management,
+                warehouse operations, delivery tracking, and supplier orders.
+            </p>
+        </section>
+
+        <section class="content-card">
+            <h2>Suggested Questions</h2>
+
+            <div class="dashboard-cards">
+
+                <article class="stat-card">
+                    <div class="stat-icon">📦</div>
+                    <div>
+                        <h2>Inventory</h2>
+                        <p>How can I manage low-stock products?</p>
+                    </div>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon">🚚</div>
+                    <div>
+                        <h2>Delivery</h2>
+                        <p>How can I monitor delivery status?</p>
+                    </div>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon">🏭</div>
+                    <div>
+                        <h2>Warehouse</h2>
+                        <p>How can I organize warehouse operations?</p>
+                    </div>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon">🛒</div>
+                    <div>
+                        <h2>Supplier Orders</h2>
+                        <p>How can I track pending supplier orders?</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="content-card">
+
+            <h2>Chat with AI Assistant</h2>
+            <p>Type your question in the box below.</p>
+
+            <div id="chat-messages"
+                 style="min-height: 180px; max-height: 350px; overflow-y: auto; padding: 15px; margin: 20px 0; background: #f4f7fb; border-radius: 10px;">
+
+                <p>
+                    <strong>AI Assistant:</strong>
+                    Hello! How can I help you with your supply chain tasks today?
+                </p>
+
+            </div>
+
+            <form id="ai-chat-form"
+                  style="display: flex; gap: 10px;">
+
+                <input
+                    type="text"
+                    id="ai-chat-input"
+                    placeholder="Type your question here..."
+                    required
+                    style="flex: 1; min-width: 0; padding: 12px; border: 1px solid #ccc; border-radius: 8px;"
+                >
+
+                <button type="submit" id="ai-send-button">
+                    Send
+                </button>
+
+            </form>
+
+            <p id="ai-chat-status"
+               style="margin-top: 10px; color: #666;">
+            </p>
+
+        </section>
+
+        <footer>
+            <p>
+                &copy; 2026 Salamence Tracker |
+                Logistics & Supply Chain System
+            </p>
+        </footer>
+
+    </main>
+
+    <script src="ai-assistant.js"></script>
+
+</body>
+</html>

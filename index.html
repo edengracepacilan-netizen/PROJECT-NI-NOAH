@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salamence Tracker | Logistics & Supply Chain</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- LOGIN SESSION CHECK -->
+    <script>
+        if (sessionStorage.getItem("isLoggedIn") !== "true") {
+            window.location.replace("login.html");
+        }
+    </script>
+</head>
+<body>
+
+    <header class="main-navigation">
+        <a href="index.html" class="brand-name">
+            Salamence Tracker
+        </a>
+
+        <nav class="top-nav-links">
+            <a href="about.html" class="top-nav-link">
+                About
+            </a>
+
+            <a href="#" class="top-nav-link" id="logout-button">
+                Logout
+            </a>
+        </nav>
+    </header>
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>Salamence Tracker</h2>
+            <p>Supply Chain System</p>
+        </div>
+
+        <nav>
+            <a href="index.html" class="nav-link active">
+                <span class="nav-icon">🏠</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="warehouse.html" class="nav-link">
+                <span class="nav-icon">🏭</span>
+                <span>Warehouse</span>
+            </a>
+
+            <a href="inventory.html" class="nav-link">
+                <span class="nav-icon">📦</span>
+                <span>Inventory Stocks</span>
+            </a>
+
+            <a href="fleet.html" class="nav-link">
+                <span class="nav-icon">🚚</span>
+                <span>Fleet Tracking</span>
+            </a>
+
+            <a href="suppliers.html" class="nav-link">
+                <span class="nav-icon">🛒</span>
+                <span>Supplier Orders</span>
+            </a>
+
+            <a href="ai-assistant.html" class="nav-link">
+                <span class="nav-icon">🤖</span>
+                <span>AI Assistant</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>Salamence Tracker</p>
+            <p>Version 1.0</p>
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>Dashboard</h1>
+                <p>Logistics and Supply Chain Overview</p>
+            </div>
+
+            <div class="user-info">
+                <span>Administrator</span>
+            </div>
+        </header>
+
+        <section class="dashboard-cards">
+
+            <article class="stat-card">
+                <div class="stat-icon">📦</div>
+                <div>
+                    <p>Total Products</p>
+                    <h2 id="total-products">0</h2>
+                    <span>Products in inventory</span>
+                </div>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-icon">⚠️</div>
+                <div>
+                    <p>Low Stock Items</p>
+                    <h2 id="low-stock">0</h2>
+                    <span>Items need restocking</span>
+                </div>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-icon">🚚</div>
+                <div>
+                    <p>Active Vehicles</p>
+                    <h2 id="active-vehicles">0</h2>
+                    <span>Vehicles on delivery</span>
+                </div>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-icon">🛒</div>
+                <div>
+                    <p>Pending Orders</p>
+                    <h2 id="pending-orders">0</h2>
+                    <span>Orders awaiting processing</span>
+                </div>
+            </article>
+
+        </section>
+        <section class="content-card">
+
+            <div class="section-header">
+                <div>
+                    <h2>Recent Shipments</h2>
+                    <p>Latest shipment activities</p>
+                </div>
+
+                <button type="button" id="view-shipments">
+                    View Shipments
+                </button>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tracking Number</th>
+                            <th>Destination</th>
+                            <th>Vehicle</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="shipment-table">
+                        <tr>
+                            <td colspan="4">
+                                No shipment records yet.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <section class="content-card">
+
+            <div class="section-header">
+                <div>
+                    <h2>Inventory Alerts</h2>
+                    <p>Products that may need restocking</p>
+                </div>
+
+                <button type="button" id="view-inventory">
+                    View Inventory
+                </button>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>SKU</th>
+                            <th>Available Stock</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="inventory-alert-table">
+                        <tr>
+                            <td colspan="4">
+                                No inventory records yet.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <section class="ai-preview">
+
+            <div>
+                <h2>AI Supply Chain Assistant</h2>
+
+                <p>
+                    Get help analyzing inventory, monitoring orders,
+                    and identifying possible delivery delays.
+                </p>
+            </div>
+
+            <a href="ai-assistant.html" class="ai-button">
+                Open AI Assistant
+            </a>
+
+        </section>
+
+        <footer>
+            <p>
+                &copy; 2026 Salamence Tracker |
+                Logistics & Supply Chain System
+            </p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

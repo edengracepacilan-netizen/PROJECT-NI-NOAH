@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Salamence Tracker | Warehouse</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        if (sessionStorage.getItem("isLoggedIn") !== "true") {
+            window.location.replace("login.html");
+        }
+    </script>
+</head>
+<body>
+
+    <header class="main-navigation">
+        <a href="index.html" class="brand-name">
+            Salamence Tracker
+        </a>
+
+        <nav class="top-nav-links">
+            <a href="about.html" class="top-nav-link">About</a>
+            <a href="#" class="top-nav-link" id="logout-button">Logout</a>
+        </nav>
+    </header>
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>Salamence Tracker</h2>
+            <p>Supply Chain System</p>
+        </div>
+
+        <nav>
+            <a href="index.html" class="nav-link">
+                <span class="nav-icon">🏠</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="warehouse.html" class="nav-link active">
+                <span class="nav-icon">🏭</span>
+                <span>Warehouse</span>
+            </a>
+
+            <a href="inventory.html" class="nav-link">
+                <span class="nav-icon">📦</span>
+                <span>Inventory Stocks</span>
+            </a>
+
+            <a href="fleet.html" class="nav-link">
+                <span class="nav-icon">🚚</span>
+                <span>Fleet Tracking</span>
+            </a>
+
+            <a href="suppliers.html" class="nav-link">
+                <span class="nav-icon">🛒</span>
+                <span>Supplier Orders</span>
+            </a>
+
+            <a href="ai-assistant.html" class="nav-link">
+                <span class="nav-icon">🤖</span>
+                <span>AI Assistant</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>Salamence Tracker</p>
+            <p>Version 1.0</p>
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>Warehouse Management</h1>
+                <p>Manage and monitor warehouse information.</p>
+            </div>
+
+            <div class="user-info">
+                <span>Administrator</span>
+            </div>
+        </header>
+        <section class="dashboard-cards">
+
+            <article class="stat-card">
+                <div class="stat-icon">🏭</div>
+                <div>
+                    <p>Total Warehouses</p>
+                    <h2 id="total-warehouses">0</h2>
+                    <span>Registered warehouses</span>
+                </div>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-icon">📦</div>
+                <div>
+                    <p>Stored Products</p>
+                    <h2 id="stored-products">0</h2>
+                    <span>Products in storage</span>
+                </div>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-icon">📍</div>
+                <div>
+                    <p>Warehouse Locations</p>
+                    <h2 id="warehouse-locations">0</h2>
+                    <span>Registered locations</span>
+                </div>
+            </article>
+
+        </section>
+        <section class="content-card">
+
+            <div class="section-header">
+                <div>
+                    <h2>Warehouse Records</h2>
+                    <p>List of registered warehouse locations.</p>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Warehouse ID</th>
+                            <th>Warehouse Name</th>
+                            <th>Location</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="warehouse-table">
+                        <tr>
+                            <td colspan="4">
+                                No warehouse records yet.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+        <footer>
+            <p>
+                &copy; 2026 Salamence Tracker |
+                Logistics & Supply Chain System
+            </p>
+        </footer>
+
+    </main>
+    <script src="script.js"></script>
+    <script src="warehouse.js"></script>
+
+</body>
+</html>
